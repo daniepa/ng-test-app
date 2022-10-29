@@ -55,3 +55,29 @@
       </td>
   </tbody>
 </table>
+
+<h3>ngSwitch</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>id</th>
+      <th>titolo</th>
+      <th>quantità</th>
+      <th>disponibilità</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let l of libri">
+      <td>{{ l.id }}</td>
+      <td>{{ l.titolo }}</td>
+      <td>{{ l.quantita }}</td>
+      <td>
+        <span [ngSwitch]="l.quantita">
+          <span style="color:red" *ngSwitchCase="0">non disponibile</span>
+          <span style="color:green" *ngSwitchDefault>disponibile</span>
+        </span>
+      </td>
+    </tr>
+  </tbody>
+</table>

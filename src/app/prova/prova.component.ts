@@ -20,8 +20,15 @@ export class ProvaComponent implements OnInit {
     { id: 1001, nome:'Walter', cognome: 'White' },
     { id: 1002, nome:'Jesse', cognome: 'Pinkman' },
     { id: 1003, nome:'Luca', cognome: 'Giurato' },
-    { id: 1004, nome:'Mario', cognome: 'Rossi' }
+    { id: 1004, nome:'Mario', cognome: 'Rossi' },
   ];
+
+  libri = [
+    { id: 101, titolo: 'Il signore degli anelli', quantita: 5 },
+    { id: 102, titolo: 'Il nome della rosa', quantita: 0 },
+    { id: 103, titolo: 'Io uccido', quantita: 0 },
+    { id: 104, titolo: 'Il profumo', quantita: 9 },
+  ]
 
   ngOnInit() {
   }
