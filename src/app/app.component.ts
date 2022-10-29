@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'ng-test-app';
+  title = 'Primo test completo';
+  isBtnInactive = false;
+  onBtnClick() {
+    alert('mi hai cliccato!');
+  }
+  onInputInsert(e: Event) {
+    const res = document.querySelector('#res');
+    res.innerHTML = (<HTMLInputElement>e.target).value;
+  }
 }
