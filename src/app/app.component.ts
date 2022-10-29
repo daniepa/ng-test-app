@@ -6,13 +6,18 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Primo test completo';
-  isBtnInactive = false;
+  title : string = 'Primo test completo';
+  isBtnInactive : boolean = false;
+  favLanguage: string = 'JavaScript';
+
   onBtnClick() {
     alert('mi hai cliccato!');
   }
   onInputInsert(e: Event) {
     const res = document.querySelector('#res');
     res.innerHTML = (<HTMLInputElement>e.target).value;
+  }
+  cambiaInteresse() {
+    this.favLanguage = 'TypeScript';
   }
 }

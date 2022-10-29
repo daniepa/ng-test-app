@@ -7,3 +7,7 @@
 <input type="text" placeholder="inserisci qualcosa" (input)="onInputInsert($event)">
 <div id="res"></div>
 <h3>2 way binding</h3>
+<label for="interesse">linguaggio preferito:</label>
+<input type="text" placeholder="scrivi qualcosa d'altro" [(ngModel)]="favLanguage">
+<br>
+<button (click)="cambiaInteresse()">cambia interesse</button>
