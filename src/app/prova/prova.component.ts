@@ -16,6 +16,13 @@ export class ProvaComponent implements OnInit {
   num1 : number = 5;
   num2 : number = 10;
 
+  persone = [
+    { id: 1001, nome:'Walter', cognome: 'White' },
+    { id: 1002, nome:'Jesse', cognome: 'Pinkman' },
+    { id: 1003, nome:'Luca', cognome: 'Giurato' },
+    { id: 1004, nome:'Mario', cognome: 'Rossi' }
+  ];
+
   ngOnInit() {
   }
 

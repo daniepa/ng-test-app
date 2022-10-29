@@ -26,3 +26,32 @@
     num1 ({{num1}}) e num2 ({{num2}}) sono uguali
   </p>
 </ng-template>
+
+<h3>direttiva ngFor</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>id</th>
+      <th>nome</th>
+      <th>cognome</th>
+      <th>index</th>
+      <th>count</th>
+      <th>note varie</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let p of persone; index as i, count as c, first as f, last as l, even as e, odd as o">
+      <td>{{ p.id }}</td>
+      <td>{{ p.nome }}</td>
+      <td><b>{{ p.cognome.toUpperCase() }}</b></td>
+      <td>{{ i }}</td>
+      <td>{{ c }}</td>
+      <td>
+        <span *ngIf="f">primo </span>
+        <span *ngIf="l">ultimo </span>
+        <span *ngIf="e">pari </span>
+        <span *ngIf="o">dispari</span>
+      </td>
+  </tbody>
+</table>
