@@ -13,6 +13,9 @@ export class ProvaComponent implements OnInit {
     minima vel, labore libero itaque quae provident suscipit. Expedita eligendi animi omnis. Consequatur
     velit ad neque quaerat!`;
 
+  num1 : number = 5;
+  num2 : number = 10;
+
   ngOnInit() {
   }
 

@@ -1,1 +1,28 @@
 <p>{{ lorem }}</p>
+<p>Tutta la parte di contenuto in blu è all'interno del componente <b>app-prova</b></p>
+
+<label>num1</label>
+<input type="number" [(ngModel)]="num1">
+<label>num2</label>
+<input type="number" [(ngModel)]="num2">
+
+<h3>if con direttiva *ngIf</h3>
+<p>num1 = {{num1}}</p>
+<p>num2 = {{num2}}</p>
+<p *ngIf="num1 > num2">num1 è > di num2</p> <!-- questo non è verificato quindi non viene stampato -->
+<p *ngIf="num2 > num1">num2 è > di num1</p>
+
+
+<h3>if else con con direttiva *ngIf ng-template</h3>
+
+<p *ngIf="num1 != num2; then bloccoIf else bloccoElse"></p>
+<ng-template #bloccoIf>
+  <p>
+    num1 ({{num1}}) e num2 ({{num2}}) NON sono uguali
+  </p>
+</ng-template>
+<ng-template #bloccoElse>
+  <p>
+    num1 ({{num1}}) e num2 ({{num2}}) sono uguali
+  </p>
+</ng-template>
