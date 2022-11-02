@@ -71,7 +71,8 @@
     <tr *ngFor="let l of libri">
       <td>{{ l.id }}</td>
       <td>{{ l.titolo }}</td>
-      <td [ngStyle]="{backgroundColor: (l.quantita < 1) ? 'red' : 'green'}">{{ l.quantita }}</td>
+      <!-- <td [ngStyle]="{backgroundColor: (l.quantita < 1) ? 'red' : 'green'}">{{ l.quantita }}</td> -->
+      <td [ngClass]="{'verde': l.quantita > 0, 'rosso': l.quantita <= 0}">{{ l.quantita }}</td>
       <td>
         <span [ngSwitch]="l.quantita">
           <span style="color:red" *ngSwitchCase="0">non disponibile</span>

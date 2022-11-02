@@ -10,3 +10,12 @@ th {
 td {
   border: 1px solid black;
 }
+
+.rosso {
+  background-color: red;
+  color: yellow;
+}
+.verde {
+  background-color: green;
+  color: white;
+}
