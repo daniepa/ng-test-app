@@ -9,6 +9,7 @@ export class AppComponent {
   title : string = 'Primo test completo';
   isBtnInactive : boolean = false;
   favLanguage: string = 'JavaScript';
+  passaggioParChi = 'variabile di passaggio da componente parent a child';
 
   onBtnClick() {
     alert('mi hai cliccato!');
