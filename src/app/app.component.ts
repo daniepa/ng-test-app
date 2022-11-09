@@ -9,7 +9,7 @@ export class AppComponent {
   title : string = 'Primo test completo';
   isBtnInactive : boolean = false;
   favLanguage: string = 'JavaScript';
-  passaggioParChi = 'variabile di passaggio da componente parent a child';
+  passaggioParChi = 'io sono una stringa dentro app.component.ts';
 
   onBtnClick() {
     alert('mi hai cliccato!');
@@ -20,5 +20,8 @@ export class AppComponent {
   }
   cambiaInteresse() {
     this.favLanguage = 'TypeScript';
+  }
+  onCambia() {
+    this.passaggioParChi = 'stringa cambiata!';
   }
 }

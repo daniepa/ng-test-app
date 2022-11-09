@@ -1,15 +1,16 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 
 @Component({
   selector: 'app-prova',
   templateUrl: './prova.component.html',
   styleUrls: ['./prova.component.css']
 })
-export class ProvaComponent implements OnInit {
+export class ProvaComponent implements OnInit, OnChanges {
 
   @Input() data : string;
 
   constructor() { }
+
 
   lorem: string = `Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas a magni placeat ducimus
     minima vel, labore libero itaque quae provident suscipit. Expedita eligendi animi omnis. Consequatur
@@ -33,6 +34,10 @@ export class ProvaComponent implements OnInit {
   ]
 
   ngOnInit() {
+    console.log(this.data);
+  }
+  ngOnChanges(changes: SimpleChanges): void {
+    console.log(changes);
   }
 
 }
